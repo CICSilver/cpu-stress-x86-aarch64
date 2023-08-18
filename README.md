@@ -1,6 +1,6 @@
 ## Instruction
 - get cpu float and int performance score on x86/aarch64 platform, now can run on windows and linux.
-- If you need to test X86 with SSE, you need to uncomment cou_stress.cpp:101 - 106 lines and 74-76 lines, then comment 70 -73 and 95 - 99 lines.
+- If you need to test X86 with SSE, you need to uncomment cou_stress.cpp:101-106 lines and 74-76 lines, then comment 70-73 and 95-99 lines.
 ## Install
 #### Windows 
 run
