@@ -2,7 +2,10 @@
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
-#ifndef _WIN32
+#ifdef _WIN32
+#include <Windows.h>
+#define sleep(n) Sleep(n)
+#else
 #include <unistd.h>
 #include <pthread.h>
 #endif
@@ -159,7 +162,7 @@ int main(int argc, char *argv[])
     if (argc > 1)
     {
         char *str = argv[1];
-        isFloat = (strcmp(str, "-float") == 0);
+        isFloat = (strcmp(str, "-float") || strcmp)(str, "-f") == 0);
         isAll = (strcmp(str, "-a") == 0 || strcmp(str, "-all") == 0);
     }
 
